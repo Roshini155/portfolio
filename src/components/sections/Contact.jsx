@@ -7,10 +7,10 @@ import SectionHeader from '../ui/SectionHeader'
 import { FiMail, FiPhone, FiLinkedin, FiGithub, FiSend, FiCheckCircle, FiAlertCircle } from 'react-icons/fi'
 
 const contactInfo = [
-  { icon: <FiMail size={18} />, label: 'Email', value: 'abirami.s2024it@sece.ac.in', href: 'mailto:abirami.s2024it@sece.ac.in' },
-  { icon: <FiPhone size={18} />, label: 'Phone', value: '+91 63836 10873', href: 'tel:+916383610873' },
-  { icon: <FiLinkedin size={18} />, label: 'LinkedIn', value: 'linkedin.com/in/abirami-s-7138a8332', href: 'https://www.linkedin.com/in/abirami-s-7138a8332/' },
-  { icon: <FiGithub size={18} />, label: 'GitHub', value: 'github.com/abiramiit', href: 'https://github.com/abiramiit?tab=repositories' },
+  { icon: <FiMail size={18} />, label: 'Email', value: 'roshini.kr2024it@sece.ac.in', href: 'mailto:roshini.kr2024it@sece.ac.in' },
+  { icon: <FiPhone size={18} />, label: 'Phone', value: '8807339833', href: 'tel:8807339833' },
+  { icon: <FiLinkedin size={18} />, label: 'LinkedIn', value: 'linkedin.com/in/roshini-k-r', href: 'https://www.linkedin.com/in/roshini-k-r/' },
+  { icon: <FiGithub size={18} />, label: 'GitHub', value: 'github.com/roshini-kr', href: 'https://github.com/roshini-kr' },
 ]
 
 // Set these in .env — see .env.example
@@ -90,7 +90,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder="Abirami S"
+                  placeholder="Roshini K R"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder-gray-600 focus:outline-none focus:border-brand-500/50 focus:bg-brand-500/5 transition-all"
                 />
               </div>

@@ -8,21 +8,21 @@ const timeline = [
   {
     institution: 'Sri Eshwar College of Engineering',
     degree: 'B.Tech – Information Technology',
-    score: 'CGPA: 8.3',
+    score: 'CGPA: 8.65 (upto 3rd sem)',
     period: '2024 – 2028',
     current: true,
   },
   {
-    institution: 'GHSS Doddampalayam',
+    institution: 'Gokilambal Matric Hr.Sec.School',
     degree: 'HSC (Class XII)',
-    score: '92%',
-    period: '2022 – 2024',
+    score: '96.3%',
+    period: '2023 – 2024',
     current: false,
   },
   {
-    institution: 'GHSS Doddampalayam',
+    institution: 'Gokilambal Matric Hr.Sec.School',
     degree: 'SSLC (Class X)',
-    score: '90%',
+    score: '96.2%',
     period: '2021 – 2022',
     current: false,
   },
@@ -52,27 +52,27 @@ function TimelineItem({ item, index, inView }) {
 
       {/* Card */}
       <div className="flex-1 pb-12">
-        <div className={`card relative overflow-hidden ${item.current ? 'border-brand-500/30' : ''}`}>
+        <div className={`card relative overflow-hidden bg-white dark:bg-slate-900 border-white dark:border-slate-800 shadow-sm ${item.current ? 'border-teal-500/30' : ''}`}>
           {item.current && (
-            <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-brand-500 to-violet-500" />
+            <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-teal-500 to-violet-500" />
           )}
           <div className="flex items-start justify-between gap-4 flex-wrap">
             <div>
-              <h3 className="text-base font-bold text-gray-100">{item.institution}</h3>
-              <p className="text-sm text-brand-400 font-medium mt-0.5">{item.degree}</p>
+              <h3 className="text-base font-bold text-slate-900 dark:text-gray-100">{item.institution}</h3>
+              <p className="text-sm text-teal-600 dark:text-teal-400 font-medium mt-0.5">{item.degree}</p>
             </div>
             <div className="text-right flex-shrink-0">
               <span className={`text-xs font-mono px-3 py-1 rounded-full ${
                 item.current
-                  ? 'bg-brand-500/10 text-brand-300 border border-brand-500/20'
-                  : 'bg-white/5 text-gray-400 border border-white/10'
+                  ? 'bg-teal-50 text-teal-700 border border-teal-200 dark:bg-teal-500/10 dark:text-teal-300 dark:border-teal-500/20'
+                  : 'bg-slate-100 text-slate-500 border border-slate-200 dark:bg-white/5 dark:text-gray-400 dark:border-white/10'
               }`}>
                 {item.period}
               </span>
             </div>
           </div>
           <div className="mt-3">
-            <span className="inline-flex items-center px-3 py-1 rounded-lg bg-green-500/10 text-green-400 border border-green-500/20 text-sm font-semibold">
+            <span className="inline-flex items-center px-3 py-1 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100 dark:bg-green-500/10 dark:text-green-400 dark:border-green-500/20 text-sm font-semibold">
               {item.score}
             </span>
           </div>
@@ -86,7 +86,7 @@ export default function Education() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <SectionWrapper id="education" className="bg-surface-800/30">
+    <SectionWrapper id="education" className="bg-slate-100/50 dark:bg-slate-900/30">
       <SectionHeader title="Education" subtitle="My academic journey and milestones." />
       <div ref={ref} className="max-w-2xl mx-auto">
         {timeline.map((item, i) => (

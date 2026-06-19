@@ -5,36 +5,36 @@ import SectionHeader from '../ui/SectionHeader'
 
 const achievements = [
   {
-    title: 'Career Academy India 2025',
-    detail: 'Finalist',
-    emoji: '🏆',
-    color: 'from-yellow-500/20 to-amber-500/20',
-    border: 'border-yellow-500/20',
-    text: 'text-yellow-400',
+    title: 'Astronova 2k25',
+    detail: '4th Place – CIT Coimbatore',
+    emoji: '🚀',
+    color: 'from-blue-500/20 to-indigo-500/20',
+    border: 'border-blue-500/20',
+    text: 'text-blue-400',
   },
   {
-    title: 'NXP Women in Tech Program',
-    detail: 'Selected – 2025',
-    emoji: '💡',
+    title: 'Fiestaa 2k25',
+    detail: 'Paper Presentation – KPRIET',
+    emoji: '📄',
+    color: 'from-amber-500/20 to-orange-500/20',
+    border: 'border-amber-500/20',
+    text: 'text-amber-400',
+  },
+  {
+    title: 'SelfiE Hackathon',
+    detail: 'Top 50 Finalist',
+    emoji: '🤳',
     color: 'from-pink-500/20 to-rose-500/20',
     border: 'border-pink-500/20',
     text: 'text-pink-400',
   },
   {
-    title: 'Oracle Java Batch',
-    detail: 'Certified',
-    emoji: '☕',
-    color: 'from-orange-500/20 to-red-500/20',
-    border: 'border-orange-500/20',
-    text: 'text-orange-400',
-  },
-  {
-    title: 'HackerRank Certificate',
-    detail: 'Software Engineer Intern',
-    emoji: '✅',
-    color: 'from-green-500/20 to-teal-500/20',
-    border: 'border-green-500/20',
-    text: 'text-green-400',
+    title: 'Smart Motion Hackathon 2.0',
+    detail: 'Participant – CIT Chennai',
+    emoji: '🤖',
+    color: 'from-brand-500/20 to-amber-500/20',
+    border: 'border-brand-500/20',
+    text: 'text-brand-400',
   },
 ]
 
@@ -42,7 +42,7 @@ export default function Achievements() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <SectionWrapper id="achievements" className="bg-surface-800/30">
+    <SectionWrapper id="achievements" className="bg-slate-100/50 dark:bg-slate-900/30">
       <SectionHeader title="Achievements" subtitle="Recognition and milestones along the way." />
       <div ref={ref} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {achievements.map((item, i) => (
@@ -51,13 +51,13 @@ export default function Achievements() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className={`glass border ${item.border} rounded-2xl p-6 flex flex-col items-center text-center gap-3 group hover:scale-105 transition-transform duration-300`}
+            className={`glass border-white dark:border-slate-800 rounded-2xl p-6 flex flex-col items-center text-center gap-3 group hover:scale-105 transition-transform duration-300 bg-white dark:bg-slate-900 shadow-sm`}
           >
-            <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center text-3xl border ${item.border}`}>
+            <div className={`w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-3xl border border-slate-100 dark:border-slate-700`}>
               {item.emoji}
             </div>
-            <h3 className="text-sm font-bold text-gray-100 leading-tight">{item.title}</h3>
-            <span className={`text-xs font-semibold px-3 py-1 rounded-full bg-white/5 border ${item.border} ${item.text}`}>
+            <h3 className="text-sm font-bold text-slate-900 dark:text-gray-100 leading-tight">{item.title}</h3>
+            <span className={`text-xs font-semibold px-3 py-1 rounded-full bg-teal-50 dark:bg-teal-900/20 border border-teal-100 dark:border-teal-800 text-teal-600 dark:text-teal-400`}>
               {item.detail}
             </span>
           </motion.div>

@@ -6,8 +6,8 @@ export default function Loader() {
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-surface-900"
-      style={{ backgroundColor: '#0a0a0f' }}
+      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-slate-50 dark:bg-slate-950"
+      style={{ backgroundColor: '#f8fafc' }}
     >
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
@@ -18,7 +18,7 @@ export default function Loader() {
         <div className="relative">
           <div className="loader-ring" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-xl font-bold gradient-text">A</span>
+            <span className="text-xl font-bold gradient-text">R</span>
           </div>
         </div>
         <motion.p

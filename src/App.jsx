@@ -16,7 +16,7 @@ import ScrollProgress from './components/ui/ScrollProgress'
 
 export default function App() {
   const [loading, setLoading] = useState(true)
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false) // Default to light mode
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1800)
@@ -28,7 +28,7 @@ export default function App() {
     if (darkMode) {
       html.classList.add('dark')
       html.classList.remove('light')
-      document.body.style.backgroundColor = '#0a0a0f'
+      document.body.style.backgroundColor = '#020617'
       document.body.style.color = '#f1f5f9'
     } else {
       html.classList.remove('dark')
@@ -44,7 +44,7 @@ export default function App() {
     <div className={darkMode ? 'dark' : 'light'}>
       <ScrollProgress />
       <Navbar darkMode={darkMode} toggleDark={() => setDarkMode(d => !d)} />
-      <main>
+      <main className="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
         <Hero />
         <About />
         <Education />

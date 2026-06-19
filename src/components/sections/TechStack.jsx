@@ -5,46 +5,32 @@ import SectionHeader from '../ui/SectionHeader'
 
 const skillGroups = [
   {
-    category: 'Languages',
+    category: 'Programming Languages',
     color: 'from-orange-500/20 to-red-500/20',
     border: 'border-orange-500/20',
     text: 'text-orange-400',
-    skills: ['C', 'C++', 'Java', 'HTML', 'CSS'],
+    skills: ['C', 'Python', 'Java', 'C++'],
   },
   {
-    category: 'Frontend',
+    category: 'Web Technologies',
     color: 'from-cyan-500/20 to-blue-500/20',
     border: 'border-cyan-500/20',
     text: 'text-cyan-400',
-    skills: ['React', 'Tailwind CSS'],
-  },
-  {
-    category: 'Backend',
-    color: 'from-green-500/20 to-emerald-500/20',
-    border: 'border-green-500/20',
-    text: 'text-green-400',
-    skills: ['Node.js', 'Express.js', 'Spring Boot'],
-  },
-  {
-    category: 'Database',
-    color: 'from-violet-500/20 to-purple-500/20',
-    border: 'border-violet-500/20',
-    text: 'text-violet-400',
-    skills: ['MongoDB', 'MySQL'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'React.js'],
   },
   {
     category: 'Tools',
     color: 'from-brand-500/20 to-indigo-500/20',
     border: 'border-brand-500/20',
     text: 'text-brand-400',
-    skills: ['Git', 'GitHub', 'Postman', 'AWS', 'VS Code', 'MySQL Workbench'],
+    skills: ['VS Code', 'Canva', 'MySQL', 'Postman', 'Excel'],
   },
   {
-    category: 'Core Concepts',
+    category: 'Tech Stack / Concepts',
     color: 'from-pink-500/20 to-rose-500/20',
     border: 'border-pink-500/20',
     text: 'text-pink-400',
-    skills: ['DSA', 'OOP', 'DBMS', 'Computer Networks'],
+    skills: ['OOPS', 'DAA', 'DSA', 'DBMS'],
   },
 ]
 
@@ -54,7 +40,7 @@ export default function TechStack() {
   return (
     <SectionWrapper id="skills">
       <SectionHeader title="Tech Stack" subtitle="Technologies and tools I work with." />
-      <div ref={ref} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div ref={ref} className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5 max-w-4xl mx-auto">
         {skillGroups.map((group, gi) => (
           <motion.div
             key={group.category}
@@ -73,7 +59,7 @@ export default function TechStack() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={inView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.3, delay: gi * 0.1 + si * 0.04 }}
-                  className={`px-3 py-1.5 rounded-lg text-sm font-medium border bg-gradient-to-br ${group.color} ${group.border} ${group.text} hover:scale-105 transition-transform cursor-default`}
+                  className={`px-3 py-1.5 rounded-lg text-sm font-medium border bg-white dark:bg-slate-800 border-slate-200 dark:border-brand-800 text-slate-700 dark:text-brand-300 shadow-sm hover:scale-105 transition-transform cursor-default`}
                 >
                   {skill}
                 </motion.span>
